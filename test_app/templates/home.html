@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+<body>
+    <h1>My Notes</h1>
+    
+    <form action="" method="post"> {% csrf_token %}
+        <input name="text_item" type="text" id="id_new_item" placeholder="Enter new item">
+    </form>
+
+    <ul id="id_list_table">
+        {% for note in notes %}
+            <li> {{note.title}}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
